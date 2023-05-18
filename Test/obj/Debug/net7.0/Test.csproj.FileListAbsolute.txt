@@ -1,0 +1,15 @@
+/home/sean/Personal_Projects/csharp_sandbox/Test/bin/Debug/net7.0/Test
+/home/sean/Personal_Projects/csharp_sandbox/Test/bin/Debug/net7.0/Test.deps.json
+/home/sean/Personal_Projects/csharp_sandbox/Test/bin/Debug/net7.0/Test.runtimeconfig.json
+/home/sean/Personal_Projects/csharp_sandbox/Test/bin/Debug/net7.0/Test.dll
+/home/sean/Personal_Projects/csharp_sandbox/Test/bin/Debug/net7.0/Test.pdb
+/home/sean/Personal_Projects/csharp_sandbox/Test/obj/Debug/net7.0/Test.csproj.AssemblyReference.cache
+/home/sean/Personal_Projects/csharp_sandbox/Test/obj/Debug/net7.0/Test.GeneratedMSBuildEditorConfig.editorconfig
+/home/sean/Personal_Projects/csharp_sandbox/Test/obj/Debug/net7.0/Test.AssemblyInfoInputs.cache
+/home/sean/Personal_Projects/csharp_sandbox/Test/obj/Debug/net7.0/Test.AssemblyInfo.cs
+/home/sean/Personal_Projects/csharp_sandbox/Test/obj/Debug/net7.0/Test.csproj.CoreCompileInputs.cache
+/home/sean/Personal_Projects/csharp_sandbox/Test/obj/Debug/net7.0/Test.dll
+/home/sean/Personal_Projects/csharp_sandbox/Test/obj/Debug/net7.0/refint/Test.dll
+/home/sean/Personal_Projects/csharp_sandbox/Test/obj/Debug/net7.0/Test.pdb
+/home/sean/Personal_Projects/csharp_sandbox/Test/obj/Debug/net7.0/Test.genruntimeconfig.cache
+/home/sean/Personal_Projects/csharp_sandbox/Test/obj/Debug/net7.0/ref/Test.dll
