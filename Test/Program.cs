@@ -21,6 +21,23 @@ void SayBye()
     Console.WriteLine("Bye");
 }
 
-/*
-Literals - primitive pieces of data lexically embedded into the program.
-*/
+// Custom Types
+
+UnitConverter milesToFeetConverter = new UnitConverter (5280);
+
+Console.WriteLine (milesToFeetConverter.Convert(100));
+
+public class UnitConverter
+{
+    int ratio;  // Field
+
+    public UnitConverter (int unitRatio)    // Constructor
+    {
+        ratio = unitRatio;
+    }
+
+    public int Convert (int unit)
+    {
+        return unit * ratio;    // Method
+    }
+}
