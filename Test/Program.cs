@@ -45,7 +45,10 @@ Console.WriteLine(faveNumber);
 Console.WriteLine(Math.Abs(-5));    // Absolute value
 Console.WriteLine(Math.Sqrt(16));   // Square Root
 Console.WriteLine(Math.Floor(8.65));    // Rounds down double or decimal to nearest whole number
+Console.WriteLine(Math.Ceiling(8.65)); // Rounds up double or decimal to nearest whole number
 Console.WriteLine(Math.Min(39, 12));    // Returns smaller of two numbers
+Console.WriteLine(Math.Max(69, 420));   // Returns larger of two numbers
+Console.WriteLine(Math.Pow(3, 3));  // Raise specified number to specified power; takes two doubles
 
 // Custom Types
 
