@@ -40,6 +40,13 @@ Console.Write("Enter your favorite number!: ");
 int faveNumber = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(faveNumber);
 
+// Built-In Methods
+
+Console.WriteLine(Math.Abs(-5));    // Absolute value
+Console.WriteLine(Math.Sqrt(16));   // Square Root
+Console.WriteLine(Math.Floor(8.65));    // Rounds down double or decimal to nearest whole number
+Console.WriteLine(Math.Min(39, 12));    // Returns smaller of two numbers
+
 // Custom Types
 
 UnitConverter milesToFeetConverter = new UnitConverter (5280);
