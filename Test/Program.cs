@@ -50,12 +50,14 @@ Console.WriteLine(Math.Min(39, 12));    // Returns smaller of two numbers
 Console.WriteLine(Math.Max(69, 420));   // Returns larger of two numbers
 Console.WriteLine(Math.Pow(3, 3));  // Raise specified number to specified power; takes two doubles
 
-// String Interpolation
+// String Interpolation, methods
 
 string yourFaveMusician = "Jack White";
 string myFaveMusician = "Dan Auerbach";
 
 Console.WriteLine($"Your favorite musician is {yourFaveMusician} and mine is {myFaveMusician}.");
+Console.WriteLine(yourFaveMusician.Length);
+Console.WriteLine(myFaveMusician.IndexOf("x"));
 
 // Custom Types
 
