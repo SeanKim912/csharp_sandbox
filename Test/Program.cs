@@ -58,6 +58,8 @@ string myFaveMusician = "Dan Auerbach";
 Console.WriteLine($"Your favorite musician is {yourFaveMusician} and mine is {myFaveMusician}.");
 Console.WriteLine(yourFaveMusician.Length);
 Console.WriteLine(myFaveMusician.IndexOf("x"));
+Console.WriteLine(yourFaveMusician.ToUpper());
+Console.WriteLine(myFaveMusician.ToLower());
 Console.WriteLine(yourFaveMusician.Substring(2, 5));
 
 // Custom Types
