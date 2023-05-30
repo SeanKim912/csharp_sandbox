@@ -108,6 +108,17 @@ Console.WriteLine(p1.Name);
 Console.WriteLine("How old are you?");
     string input = Console.ReadLine();
     Console.WriteLine($"You are {input} years old!");
+
+// Defining methods
+
+static void VisitPlanets()  // Remember to name with PascalCase!
+{
+    Console.WriteLine("You visited many new planets...");
+}
+
+VisitPlanets();
+
+
 public class UnitConverter
 {
     int ratio;  // Field
