@@ -111,12 +111,12 @@ Console.WriteLine("How old are you?");
 
 // Defining methods
 
-static void VisitPlanets()  // Remember to name with PascalCase!
-{
-    Console.WriteLine("You visited many new planets...");
-}
+static void VisitPlanets(int numberOfPlanets)   // Name with PascalCase
+    {
+        Console.WriteLine($"You visited {numberOfPlanets} new planets...");
+    }
 
-VisitPlanets();
+VisitPlanets(2);
 
 
 public class UnitConverter
