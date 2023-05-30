@@ -111,12 +111,14 @@ Console.WriteLine("How old are you?");
 
 // Defining methods
 
-static void VisitPlanets(int numberOfPlanets)   // Name with PascalCase
+static void VisitPlanets(int numberOfPlanets, string adjective = "new")   // Name with PascalCase
+// Parameters can only be used inside their method.
+// Default parameters defined with =
     {
-        Console.WriteLine($"You visited {numberOfPlanets} new planets...");
+        Console.WriteLine($"You visited {numberOfPlanets} {adjective} planets...");
     }
 
-VisitPlanets(2);
+VisitPlanets(2, "gay");
 
 
 public class UnitConverter
