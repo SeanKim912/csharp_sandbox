@@ -62,6 +62,31 @@ Console.WriteLine(yourFaveMusician.ToUpper());
 Console.WriteLine(myFaveMusician.ToLower());
 Console.WriteLine(yourFaveMusician.Substring(2, 5));
 
+// Switch Statements
+
+string genre = Console.ReadLine();
+    switch (genre)
+    {
+        case "Drama":
+        Console.WriteLine("Citizen Kane");
+        break;
+        case "Comedy":
+        Console.WriteLine("Duck Soup");
+        break;
+        case "Adventure":
+        Console.WriteLine("King Kong");
+        break;
+        case "Horror":
+        Console.WriteLine("Pick a genre");
+        break;
+        case "Science Fiction":
+        Console.WriteLine("2001: A Space Odyssey");
+        break;
+        default:
+        Console.WriteLine("No movie found");
+        break;
+    }
+
 // Custom Types
 
 UnitConverter milesToFeetConverter = new UnitConverter (5280);
