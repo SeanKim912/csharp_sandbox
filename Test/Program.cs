@@ -111,15 +111,21 @@ Console.WriteLine("How old are you?");
 
 // Defining methods
 
-static void VisitPlanets(int numberOfPlanets, string adjective = "new")   // Name with PascalCase
+static void VisitPlanets(
+    string adjective = "brave",
+    string name = "Cosmonaut",
+    int numberOfPlanets = 0,
+    double gForce = 4.2)    // Name with PascalCase
 // Parameters can only be used inside their method.
 // Default parameters defined with =
     {
-        Console.WriteLine($"You visited {numberOfPlanets} {adjective} planets...");
+        Console.WriteLine($"Welcome back, {adjective} {name}.");
+        Console.WriteLine($"You visited {numberOfPlanets} new planets...");
+        Console.WriteLine($"...while experiencing a g-force of {gForce} g!");
     }
 
-VisitPlanets(2, "gay");
-
+VisitPlanets(numberOfPlanets: 2);   // Optional parameters can be called by name.
+// Can mix positional arguments with named ones, but positional ones MUST come first!
 
 public class UnitConverter
 {
