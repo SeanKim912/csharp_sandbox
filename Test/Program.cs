@@ -127,6 +127,14 @@ static void VisitPlanets(
 VisitPlanets(numberOfPlanets: 2);   // Optional parameters can be called by name.
 // Can mix positional arguments with named ones, but positional ones MUST come first!
 
+/*
+With Method Overloading, methods with the same name can differ based on paramater types
+or parameter numbers.
+*/
+
+Math.Round(3.14159, 2);  // With a double and an integer, rounds double to int number of decimal points.
+Math.Round(3.14159);    // With just a double, rounds to nearest integer.
+
 public class UnitConverter
 {
     int ratio;  // Field
