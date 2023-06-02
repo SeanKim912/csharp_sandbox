@@ -135,6 +135,24 @@ or parameter numbers.
 Math.Round(3.14159, 2);  // With a double and an integer, rounds double to int number of decimal points.
 Math.Round(3.14159);    // With just a double, rounds to nearest integer.
 
+// Custom method overloads
+static void NamePets(string nameOne, string nameTwo)
+{
+    Console.WriteLine($"Your pets {nameOne} and {nameTwo} will be joining your voyage across space!");
+}
+static void NamePets(string nameOne, string nameTwo, string nameThree)
+{
+    Console.WriteLine($"Your pets {nameOne}, {nameTwo}, and {nameThree} will be joining your voyage across space!");
+}
+static void NamePets()
+{
+    Console.WriteLine("Aw, you have no spacefaring pets :(");
+}
+
+NamePets("Laika", "Albert");
+NamePets("Mango", "Puddy", "Bucket");
+NamePets();
+
 public class UnitConverter
 {
     int ratio;  // Field
