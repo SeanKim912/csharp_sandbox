@@ -136,25 +136,47 @@ Math.Round(3.14159, 2);  // With a double and an integer, rounds double to int n
 Math.Round(3.14159);    // With just a double, rounds to nearest integer.
 
 // Custom method overloads
-class pets{
-
-static void NamePets(string nameOne, string nameTwo)
+class pets
 {
-    Console.WriteLine($"Your pets {nameOne} and {nameTwo} will be joining your voyage across space!");
-}
-static void NamePets(string nameOne, string nameTwo, string nameThree)
-{
-    Console.WriteLine($"Your pets {nameOne}, {nameTwo}, and {nameThree} will be joining your voyage across space!");
-}
-static void NamePets()
-{
-    Console.WriteLine("Aw, you have no spacefaring pets :(");
-}
+    static void NamePets(string nameOne, string nameTwo)
+    {
+        Console.WriteLine($"Your pets {nameOne} and {nameTwo} will be joining your voyage across space!");
+    }
+    static void NamePets(string nameOne, string nameTwo, string nameThree)
+    {
+        Console.WriteLine($"Your pets {nameOne}, {nameTwo}, and {nameThree} will be joining your voyage across space!");
+    }
+    static void NamePets()
+    {
+        Console.WriteLine("Aw, you have no spacefaring pets :(");
+    }
 }
 
 // NamePets("Laika", "Albert");
 // NamePets("Mango", "Puddy", "Bucket");
 // NamePets();
+
+// Return
+/*
+When method is declared, the type of value it will return must be declared.
+*/
+
+namespace Return
+{
+    class Planet
+    {
+        static void Main()
+        {
+            DecoratePlanet("Jupiter");
+        }
+        static string DecoratePlanet(string planet)
+        {
+            Console.WriteLine($"*.*.* Welcome to {planet} *.*.*");
+            return planet;
+        }
+    }
+}
+
 
 public class UnitConverter
 {
