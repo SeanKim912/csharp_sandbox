@@ -177,6 +177,17 @@ namespace Return
     }
 }
 
+/*
+Out parameter, for when you need to out put two pieces of information even
+though methods can only return one value.
+*/
+
+int number;
+bool success = Int32.TryParse("10602", out number);
+// number is 10602 and success is true
+int number2;
+bool success2 = Int32.TryParse(" !!! ", out number2);
+
 
 public class UnitConverter
 {
