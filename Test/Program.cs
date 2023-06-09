@@ -146,6 +146,25 @@ bool success = Int32.TryParse("10602", out number);
 int number2;
 bool success2 = Int32.TryParse(" !!! ", out number2);
 
+/*
+Out parameters for when you need a method to out put more than one pice of information.
+The following Int32.TryParse() tries to parse in put as integer.
+*/
+
+string ageAsString = "102";
+    string nameAsString = "Granny";
+
+    int ageAsInt;
+    bool outcome = Int32.TryParse(ageAsString, out ageAsInt);
+
+    int nameAsInt;
+    bool outcome2 = Int32.TryParse(nameAsString, out nameAsInt);
+
+    Console.WriteLine(outcome);
+    Console.WriteLine(ageAsInt);
+    Console.WriteLine(outcome2);
+    Console.WriteLine(nameAsInt);
+
 // Custom method overloads
 class pets
 {
