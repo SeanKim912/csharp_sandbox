@@ -135,6 +135,17 @@ or parameter numbers.
 Math.Round(3.14159, 2);  // With a double and an integer, rounds double to int number of decimal points.
 Math.Round(3.14159);    // With just a double, rounds to nearest integer.
 
+/*
+Out parameter, for when you need to out put two pieces of information even
+though methods can only return one value.
+*/
+
+int number;
+bool success = Int32.TryParse("10602", out number);
+// number is 10602 and success is true
+int number2;
+bool success2 = Int32.TryParse(" !!! ", out number2);
+
 // Custom method overloads
 class pets
 {
@@ -155,6 +166,8 @@ class pets
 // NamePets("Laika", "Albert");
 // NamePets("Mango", "Puddy", "Bucket");
 // NamePets();
+
+
 
 // Return
 /*
@@ -177,16 +190,6 @@ namespace Return
     }
 }
 
-/*
-Out parameter, for when you need to out put two pieces of information even
-though methods can only return one value.
-*/
-
-int number;
-bool success = Int32.TryParse("10602", out number);
-// number is 10602 and success is true
-int number2;
-bool success2 = Int32.TryParse(" !!! ", out number2);
 
 
 public class UnitConverter
