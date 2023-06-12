@@ -165,6 +165,18 @@ string ageAsString = "102";
     Console.WriteLine(outcome2);
     Console.WriteLine(nameAsInt);
 
+/*
+ALTERNATE EXPRESSIONS
+
+Expression-bodied definitions are good for one-liners. Use fat-arrow notation.
+*/
+
+bool isEven(int num) => num % 2 == 0;
+void Shout(string x) => Console.WriteLine(x.ToUpper());
+
+Console.WriteLine(isEven(3));
+Shout("butts butts butts");
+
 // Custom method overloads
 class pets
 {
