@@ -177,6 +177,31 @@ void Shout(string x) => Console.WriteLine(x.ToUpper());
 Console.WriteLine(isEven(3));
 Shout("butts butts butts");
 
+// Methods as Arguments
+
+int[] numbers = {1,2,3,4,5};
+
+bool IsEven(int num) => number % 2 == 0;
+
+bool hasEvenNumber = Array.Exists(numbers, IsEven);
+
+Console.WriteLine(hasEvenNumber);
+
+/*
+What is happening above is that Array.Exists uses the array
+as one argument, and is told to use the IsEven method on every
+item in the array. If ANY of those are true, .Exists returns true.
+
+Another example below is Array.Find, which finds the first element
+for which the method returns true.
+*/
+
+string[] adjectives = {"rocky", "mountainous", "cosmic", "extraterrestrial"};
+
+bool IsLong(string word) => word.Length > 8;
+string firstLongAdjective = Array.Find(adjectives, IsLong);
+Console.WriteLine($"The first long word is: {firstLongAdjective}");
+
 // Custom method overloads
 class pets
 {
