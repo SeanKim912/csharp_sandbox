@@ -202,6 +202,33 @@ bool IsLong(string word) => word.Length > 8;
 string firstLongAdjective = Array.Find(adjectives, IsLong);
 Console.WriteLine($"The first long word is: {firstLongAdjective}");
 
+// Lambda functions. Anonymous functions defined directly in method call.
+
+bool hasOddNumber = Array.Exists(numbers, (int num) => num % 2 != 0);
+Console.WriteLine(hasOddNumber);
+
+/*
+Above can be shortened even further to:
+bool hasOddNumber = Array.Exists(numbers, num => num % 2 != 0);
+since type can be assumed given the operators.
+*/
+
+/*
+ARRAYS
+
+Arrays in C# must have all items be the same type.
+Defined as follows:
+*/
+
+int[] inty = {3, 44, 12};
+string[] stringy = {"butts", "wieners", "boobies"};
+
+double[] doubly;
+
+doubly = new double[] {3.16, 0.2, 140.0};
+
+// New keyword denotes a new instance of that array class.
+
 // Custom method overloads
 class pets
 {
