@@ -226,6 +226,8 @@ string[] stringy = {"butts", "wieners", "boobies"};
 double[] doubly;
 
 doubly = new double[] {3.16, 0.2, 140.0};
+Console.WriteLine(stringy);
+Console.WriteLine(stringy.Length);
 
 // New keyword denotes a new instance of that array class.
 
