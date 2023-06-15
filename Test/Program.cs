@@ -231,6 +231,11 @@ Console.WriteLine(stringy.Length);
 
 // New keyword denotes a new instance of that array class.
 
+/*
+Array methods include:
+Array.Sort(arrayItself), Array.IndexOf(arrayItself, value), Array.Find(arrayItself, value)
+*/
+
 // Custom method overloads
 class pets
 {
