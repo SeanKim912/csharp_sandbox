@@ -236,6 +236,18 @@ Array methods include:
 Array.Sort(arrayItself), Array.IndexOf(arrayItself, value), Array.Find(arrayItself, value)
 */
 
+/*
+Do...While Loop
+
+Will always run at least once no matter what, regardless of stopping condition.
+*/
+
+bool buttonClick = true;
+
+do {
+    Console.WriteLine("RING RING BOYZZZZZZ!!!!!!!");
+} while (!buttonClick);
+
 // Custom method overloads
 class pets
 {
