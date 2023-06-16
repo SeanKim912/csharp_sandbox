@@ -248,6 +248,21 @@ do {
     Console.WriteLine("RING RING BOYZZZZZZ!!!!!!!");
 } while (!buttonClick);
 
+// For Loop
+
+for (int i = 0; i < 4; i++)
+{
+    Console.WriteLine(i);
+}
+
+// For Each Loop
+string[] todo = { "respond to email", "make wireframe", "program feature", "fix bugs" };
+
+    foreach (string item in todo)
+    {
+        Console.WriteLine(item);
+    }
+
 // Custom method overloads
 class pets
 {
