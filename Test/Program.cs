@@ -243,8 +243,13 @@ Will always run at least once no matter what, regardless of stopping condition.
 */
 
 bool buttonClick = true;
+int numRung = 0;
 
 do {
+    if (numRung == 3) {
+        buttonClick = false;
+        break;
+    }
     Console.WriteLine("RING RING BOYZZZZZZ!!!!!!!");
 } while (!buttonClick);
 
@@ -254,6 +259,14 @@ for (int i = 0; i < 4; i++)
 {
     Console.WriteLine(i);
 }
+
+/*
+BREAK: Ends loop block.
+CONTINUE: Bypasses parts of code, ignoring whatever comes after in loop and goes
+back to top of loop and starts again.
+RETURN: Will break loop and return to control point in program where method
+was called.
+*/
 
 // For Each Loop
 string[] todo = { "respond to email", "make wireframe", "program feature", "fix bugs" };
