@@ -276,6 +276,14 @@ string[] todo = { "respond to email", "make wireframe", "program feature", "fix 
         Console.WriteLine(item);
     }
 
+// CLASSES
+Forest f = new Forest();
+f.Name = "Congo";
+f.Trees = 0;
+f.age = 2000;
+f.Biome = "Tropical";
+Console.WriteLine($"{f.Name}, {f.Biome}");
+
 // Custom method overloads
 class pets
 {
@@ -303,6 +311,7 @@ class pets
 /*
 When method is declared, the type of value it will return must be declared.
 */
+
 
 namespace Return
 {
@@ -349,5 +358,35 @@ public class Panda
     {
         Name = n;   // Assign the instance field
         Population = Population + 1;    // Increment the static Population field
+    }
+}
+
+public class Forest
+{
+    public string name;
+    public string Name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+    public int trees;
+    public int Trees
+    {
+        get { return trees; }
+        set { trees = value; }
+    }
+    public int age;
+    public string biome;
+    public string Biome
+    {
+        get { return biome; }
+        set {
+        if (value == "Tropical" || value == "Temperate" || value == "Boreal")
+        {
+            biome = value;
+        } else {
+            biome = "Unknown";
+        }
+    }
     }
 }
