@@ -283,6 +283,7 @@ f.Trees = 0;
 f.age = 2000;
 f.Biome = "Tropical";
 Console.WriteLine($"{f.Name}, {f.Biome}");
+Console.WriteLine(f.IncreaseAge(2));
 
 // Custom method overloads
 class pets
@@ -393,5 +394,12 @@ public class Forest
             biome = "Unknown";
         }
     }
+    }
+
+    // Methods
+    public int IncreaseAge(int growth)
+    {
+        Age = Age + growth;
+        return Age;
     }
 }
