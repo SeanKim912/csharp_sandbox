@@ -369,14 +369,19 @@ public class Forest
         get { return name; }
         set { name = value; }
     }
-    public int trees;
     public int Trees
-    {
-        get { return trees; }
-        set { trees = value; }
-    }
+    { get; set; } // same as declaring getter/setter above, called an automatic property
     public int age;
-    public string biome;
+    public int Age
+    {
+        get { return age; }
+        private set { age = value; } // getter is public, setter is private.
+    }
+    private string biome;
+    /*
+    External code would be able to access the biome field directly with public,
+    so set to private so only code within the class definition code.
+    */
     public string Biome
     {
         get { return biome; }
