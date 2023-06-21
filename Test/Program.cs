@@ -277,12 +277,15 @@ string[] todo = { "respond to email", "make wireframe", "program feature", "fix 
     }
 
 // CLASSES
-Forest f = new Forest();
-f.Name = "Congo";
+Forest f = new Forest("Congo", "Tropical");
+Forest a = new Forest("Amazon", "Rainforest");
+// The following are not necessary with a defined constructor.
+// f.Name = "Congo";
+// f.Biome = "Tropical";
 f.Trees = 0;
 f.age = 2000;
-f.Biome = "Tropical";
 Console.WriteLine($"{f.Name}, {f.Biome}");
+Console.WriteLine($"{a.Name}, {a.Biome}");
 Console.WriteLine(f.IncreaseAge(2));
 
 // Custom method overloads
@@ -401,5 +404,17 @@ public class Forest
     {
         Age = Age + growth;
         return Age;
+    }
+
+    /*
+        Constructor methods can be called to instantly set a new instance's properties.
+        With no method defined an empty constructor method is defaulted.
+    */
+
+    public Forest(string name, string biome = "Unknown")
+    {
+        this.Name = name;
+        this.Biome = biome;
+        this.Age = 0;
     }
 }
