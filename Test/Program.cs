@@ -413,6 +413,7 @@ public class Forest
 
     public Forest(string name, string biome = "Unknown")
     {
+        // this keyword refers to the particular instance created when constructor is invoked.
         this.Name = name;
         this.Biome = biome;
         this.Age = 0;
