@@ -288,6 +288,10 @@ Console.WriteLine($"{f.Name}, {f.Biome}");
 Console.WriteLine($"{a.Name}, {a.Biome}");
 Console.WriteLine(f.IncreaseAge(2));
 
+Forest g = new Forest("Hundred Acre Woods");
+Console.WriteLine(g.Name);
+Console.WriteLine(g.Biome);
+
 // Custom method overloads
 class pets
 {
@@ -417,5 +421,18 @@ public class Forest
         this.Name = name;
         this.Biome = biome;
         this.Age = 0;
+    }
+
+    /*
+        Constructors can be overloaded just like other methods. The one below is for when an
+        instance is constructed with just one argument when constructor is called. The syntax
+        is a holdover from C# 4.0.
+
+        The following instance called this way will have a name, but no biome or age.
+    */
+
+    public Forest(string name) : this(name, "Unknown")
+    {
+        Console.WriteLine("Name property not specified. Value defaulted to 'Unknown'.");
     }
 }
