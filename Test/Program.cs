@@ -415,12 +415,21 @@ public class Forest
         With no method defined an empty constructor method is defaulted.
     */
 
+    private static int forestsCreated;
+
+    public static int ForestsCreated
+    {
+        get { return forestsCreated; }
+        private set { forestsCreated = value; }
+    }
+
     public Forest(string name, string biome = "Unknown")
     {
         // this keyword refers to the particular instance created when constructor is invoked.
         this.Name = name;
         this.Biome = biome;
         this.Age = 0;
+        ForestsCreated++;
     }
 
     /*
@@ -433,6 +442,7 @@ public class Forest
 
     public Forest(string name) : this(name, "Unknown")
     {
+        ForestsCreated++;
         Console.WriteLine("Name property not specified. Value defaulted to 'Unknown'.");
     }
 }
