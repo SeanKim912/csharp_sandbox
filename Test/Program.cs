@@ -403,6 +403,17 @@ public class Forest
     }
     }
 
+    private static string treeFacts
+    public static string TreeFacts
+    {
+        get { return treeFacts; }
+    }
+
+    public static void PrintTreeFacts()
+    {
+        Console.WriteLine(TreeFacts);
+    }
+
     // Methods
     public int IncreaseAge(int growth)
     {
