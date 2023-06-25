@@ -469,3 +469,9 @@ public class Forest
         Console.WriteLine("Name property not specified. Value defaulted to 'Unknown'.");
     }
 }
+
+/*
+Utilities or libraries like Math or Console are actually static classes. Static classes cannot
+be instantiated, and are typically just used as tools because they don't store new info. You
+rarely create static classes of your own.
+*/
