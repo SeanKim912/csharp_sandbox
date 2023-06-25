@@ -1,4 +1,23 @@
-﻿using System;
+﻿/*
+General Notes:
+
+Not written this way here, but a C# program is fundamentally:
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        ...
+    }
+}
+
+Where Main is a public method of the Program class that can be called outside of
+Program. It is static, so it is called from the class name: Program.Main(). It is void
+becuase it returns nothing, and as a method it has one parameter "args" which is an
+array of strings.
+*/
+
+using System;
 
 Console.WriteLine("Hello, World!");
 
@@ -377,6 +396,9 @@ public class Forest
     before a class is used, either before an object is made from teh type or a static member is accessed.
     In the following case, the static constructor would be run as soon as the first line with "Forest"
     in it.
+
+    A common static error is putting an access modifier (public/private) on a static constructor, which
+    is not allowed (CS0515)
     */
     static Forest()
     {
