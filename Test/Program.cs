@@ -291,6 +291,7 @@ Console.WriteLine(f.IncreaseAge(2));
 Forest g = new Forest("Hundred Acre Woods");
 Console.WriteLine(g.Name);
 Console.WriteLine(g.Biome);
+Forest.PrintTreeFacts();
 
 // Custom method overloads
 class pets
@@ -371,6 +372,17 @@ public class Panda
 
 public class Forest
 {
+    /*
+    An instance constructor is run before an instance is used, whereas a static constructor is run once
+    before a class is used, either before an object is made from teh type or a static member is accessed.
+    In the following case, the static constructor would be run as soon as the first line with "Forest"
+    in it.
+    */
+    static Forest()
+    {
+        treeFacts = "Forests provide a diversity of ecosystem services including:\r\n  aiding in regulating climate.\r\n  purifying water.\r\n  mitigating natural hazards such as floods.\n";
+        ForestsCreated = 0;
+    }
     public string name;
     public string Name
     {
@@ -403,7 +415,7 @@ public class Forest
     }
     }
 
-    private static string treeFacts
+    private static string treeFacts;
     public static string TreeFacts
     {
         get { return treeFacts; }
