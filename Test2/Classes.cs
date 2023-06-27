@@ -22,23 +22,23 @@ namespace Basics
         void Honk();
     }
 
-    class Sedan : IAutomobile
+    class Vehicle // Superclass
+    {
+        public double MPG
+        {
+            get;
+            private set;
+        }
+    }
+
+    class Sedan : Vehicle, IAutomobile // Type superclass before interfaces
     {
         public string LicensePlate
-        {
-            get;
-            set;
-        }
+        { get; set; }
         public double Speed
-        {
-            get;
-            set;
-        }
+        { get; set; }
         public int Wheels
-        {
-            get;
-            set;
-        }
+        { get; set; }
         public void Honk()
         {
             Console.WriteLine("HONK");
@@ -46,4 +46,21 @@ namespace Basics
     }
 
     // If code above did not properly implement IAutomobile interface, would throw error CS0535;
+
+    class Truck : Vehicle, IAutomobile
+    {
+        public string LicensePlate
+        { get; set; }
+        public double Speed
+        { get; set; }
+        public int Wheels
+        { get; set; }
+        public double Weight
+        { get; set; }
+        public void Honk()
+        {
+            Console.WriteLine("HONK");
+        }
+
+    }
 }
