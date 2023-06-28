@@ -15,11 +15,19 @@ Where Main is a public method of the Program class that can be called outside of
 Program. It is static, so it is called from the class name: Program.Main(). It is void
 becuase it returns nothing, and as a method it has one parameter "args" which is an
 array of strings.
+
+Args can be run on the command line with dotnet run, in the format "dotnet run arg1
+arg 2 arg3", that can be then used anywhere in the code! See below where args is
+used.
 */
 
 using System;
 
-Console.WriteLine("Hello, World!");
+if (args.Length > 0)
+{
+    string mainPhrase = String.Join(" and ", args);
+    Console.WriteLine($"My favorite things are {mainPhrase}!");
+}
 
 // First int specifies type of return value, second int specifies type of the paramter being input
 
@@ -313,6 +321,7 @@ Console.WriteLine(g.Biome);
 Forest.PrintTreeFacts();
 
 // Custom method overloads
+
 class pets
 {
     static void NamePets(string nameOne, string nameTwo)

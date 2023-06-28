@@ -25,10 +25,12 @@ namespace Basics
     class Vehicle // Superclass
     {
         public double MPG
-        {
-            get;
-            private set;
-        }
+        { get; protected set; }
+        /*
+            Protected is another access modifier stricter than public but less than private.
+            A protected member can be accessed by the current class any class that inherits
+            from it.
+        */
     }
 
     class Sedan : Vehicle, IAutomobile // Type superclass before interfaces
