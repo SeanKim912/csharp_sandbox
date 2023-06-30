@@ -32,12 +32,21 @@ namespace Basics
             from it.
         */
 
+        public double Speed
+        { get; protected set; }
+
         public int Seats
         { get; private set;}
 
         public Vehicle(int seats)
         {
             Seats = seats;
+        }
+
+        // Virtual keyword indicates this member may be overridden by an inherited class
+        public virtual void SpeedUp()
+        {
+            Speed += 5;
         }
     }
 
@@ -51,13 +60,23 @@ namespace Basics
 
         public string LicensePlate
         { get; set; }
-        public double Speed
-        { get; set; }
+
         public int Wheels
         { get; set; }
         public void Honk()
         {
             Console.WriteLine("HONK");
+        }
+
+        // Override keyword indicates we are changing the properties of the member defined in the superclass.
+        public override void SpeedUp()
+        {
+            Speed += 4;
+
+            if (Speed > 20 )
+            {
+                Speed = 20;
+            }
         }
     }
 
@@ -66,8 +85,6 @@ namespace Basics
     class Truck : Vehicle, IAutomobile
     {
         public string LicensePlate
-        { get; set; }
-        public double Speed
         { get; set; }
         public int Wheels
         { get; set; }
