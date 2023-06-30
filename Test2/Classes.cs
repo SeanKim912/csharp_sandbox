@@ -31,10 +31,24 @@ namespace Basics
             A protected member can be accessed by the current class any class that inherits
             from it.
         */
+
+        public int Seats
+        { get; private set;}
+
+        public Vehicle(int seats)
+        {
+            Seats = seats;
+        }
     }
 
     class Sedan : Vehicle, IAutomobile // Type superclass before interfaces
     {
+        // base calls the constructor of hte superclass.
+        public Sedan(int seats) : base(seats)
+        {
+            Wheels = 4;
+        }
+
         public string LicensePlate
         { get; set; }
         public double Speed
