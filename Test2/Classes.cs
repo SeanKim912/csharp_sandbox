@@ -22,7 +22,7 @@ namespace Basics
         void Honk();
     }
 
-    class Vehicle // Superclass
+    abstract class Vehicle // Superclass
     {
         public double MPG
         { get; protected set; }
@@ -48,6 +48,15 @@ namespace Basics
         {
             Speed += 5;
         }
+
+        public abstract string Describe();
+        /*
+            Abstract keyword indicates a member that will be different for every subclass
+            but MUST nonetheless be implemented. No defined default in superclass. If a member
+            in a superclass is abstract, entire class itself must be abstract, so add abstract
+            at top. Subclass needs to use override keyword to denote it is overriding the abstract
+            member in the superclass.
+        */
     }
 
     class Sedan : Vehicle, IAutomobile // Type superclass before interfaces
@@ -56,6 +65,8 @@ namespace Basics
         public Sedan(int seats) : base(seats)
         {
             Wheels = 4;
+            LicensePlate = "AAAA";
+            Speed = 10;
         }
 
         public string LicensePlate
@@ -78,12 +89,24 @@ namespace Basics
                 Speed = 20;
             }
         }
+
+        public override string Describe()
+        {
+            return $"Sedan, {Wheels} wheels, {Speed} km/h";
+        }
     }
 
     // If code above did not properly implement IAutomobile interface, would throw error CS0535;
 
     class Truck : Vehicle, IAutomobile
     {
+        public Truck(int seats) : base(seats)
+        {
+            Wheels = 4;
+            LicensePlate = "BBBB";
+            Speed = 5;
+        }
+
         public string LicensePlate
         { get; set; }
         public int Wheels
@@ -95,5 +118,9 @@ namespace Basics
             Console.WriteLine("HONK");
         }
 
+        public override string Describe()
+        {
+            return $"Truck, {Wheels} wheels, {Speed} km/h";
+        }
     }
 }
