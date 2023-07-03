@@ -1,16 +1,14 @@
 ﻿using Basics;
 
-    Sedan nissan = new Sedan();
+    Sedan nissan = new Sedan(4);
     nissan.LicensePlate = "AAAA";
-    nissan.Speed = 88.0;
     nissan.Wheels = 4;
     nissan.Honk();
 
     Console.WriteLine($"{nissan.LicensePlate} {nissan.Speed} {nissan.Wheels}");
 
-    Truck ford = new Truck();
+    Truck ford = new Truck(2);
     ford.LicensePlate = "BBBB";
-    ford.Speed = 65.0;
     ford.Wheels = 4;
     ford.Honk();
 

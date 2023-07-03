@@ -1,6 +1,8 @@
 ﻿/*
 General Notes:
 
+dotnet new console -o "name of app"
+
 Not written this way here, but a C# program is fundamentally:
 
 class Program
