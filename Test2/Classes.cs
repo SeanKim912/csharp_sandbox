@@ -15,6 +15,19 @@ namespace Basics
         Interfaces provide another layer of code safety by catching errors early.
 
         Interfaces cannot specify constructors or fields.
+
+        You can use an interface as a type declaration for a variable when referencing an
+        object, but that reference can now only use the interface functionality.
+
+        For example:
+
+        Sedan a = new Sedan();
+        IAutomobile b = a;
+
+        a and b reference the same object, but b is only an IAutomobile reference. Cannot use
+        members not defined in IAutomobile on it.
+
+        This rule also applies to base and superclasses.
         */
         string LicensePlate { get; }
         double Speed { get; }
