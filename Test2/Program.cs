@@ -22,3 +22,43 @@
     {
         Console.WriteLine(a.Speed);
     }
+
+    /*
+    CASTING
+
+    Upcasting in polymorphism is the concept of referring to objects with a reference of their own type, an
+    inherited type, or an implemented interface.
+
+    For example:
+
+    Sedan a = new Sedan();
+    Vehicle b = a;
+    IAutomobile = a;
+
+    Downcasting is referencing an object by a subclass, such as:
+
+    Vehicle c = new Vehicle();
+    Sedan d = c;
+
+    The above will throw an error saying you need an explicit conversion, which looks like:
+
+    Vehicle c = new Vehicle();
+    Sedan d = (Sedan)c;
+
+    This tells computer user is aware of risk. Will still fail in most cases. Can deal with
+    as/is operators.
+    */
+
+    /*
+    NULL AND UNASSIGNED
+
+    Missing/empty references are set with keyword null.
+    Reference variables created without a value are unassigned.
+    Can only compare null references when explicitly labeled with "null".
+
+    Comparing unassigned variables will throw an error.
+    */
+
+    Sedan blank = null;
+    Sedan blank2;
+    Sedan[] sedans = new Sedan[5]; // This creates empty array of reference types, where each element is unassigned.
