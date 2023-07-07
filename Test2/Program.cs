@@ -62,3 +62,45 @@
     Sedan blank = null;
     Sedan blank2;
     Sedan[] sedans = new Sedan[5]; // This creates empty array of reference types, where each element is unassigned.
+
+    /*
+    OBJECT
+
+    Every class is derived from Object, and is at the top of inheritance hierarchy and can always be upcast to.
+    You lose type-checking and specific functionality of subclasses when declaring as Object, but useful for when you're
+    not sure what type a variable will be, and will always have access to standard Object members.
+    */
+
+    Object o1 = new Sedan(4);
+    Object o2 = new Truck(2);
+    Object o3 = o1;
+
+    /*
+    In the background,
+    class Sedan
+    is implied to equal
+    class Sedan : Vehicle
+    and
+    class Sedan : Object
+    */
+
+    // Object members, accessible to all types with Object.
+
+    Object[] objArr = { o1, o2, nissan, ford };
+
+    foreach (Object obj in objArr)
+    {
+        Console.WriteLine(obj.GetType());
+        Console.WriteLine(obj.ToString()); // Returns string describing object
+    }
+
+    Console.WriteLine(o1.Equals(o2));
+    Console.WriteLine(o1.Equals(o3));
+
+    /*
+    Equals and ToString are virtual members in Object, so can be overridden by
+    defining a public override method.
+
+    Console.WriteLine uses ToString as part of Object, so overriding ToString affects
+    Console.WriteLine!
+    */
